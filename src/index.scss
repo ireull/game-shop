@@ -1,0 +1,25 @@
+:root {
+  --color-text-search: #9a9a9a;
+  --color-bg: #121212;
+}
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+}
+a {
+  color: var(--color-text-search);
+  text-decoration: none;
+}
+
+.App {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+  color: white;
+}
+.active {
+  color: white;
+}
