@@ -5,6 +5,8 @@ import './Slider.scss';
 export const Slider = ({ games }) => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
+  const filterGames = games.filter((game) => game.preview !== false);
+
   const changeActiveSlide = (index) => {
     setActiveSlideIndex(index);
   };
@@ -14,9 +16,9 @@ export const Slider = ({ games }) => {
   }, []);
 
   return (
-    <div className='wrapper'>
+    <div className='slider-wrapper'>
       <div className='slider'>
-        {games.map(({ id, image }, index) => {
+        {filterGames.map(({ id, image }, index) => {
           return (
             <div
               key={id}
@@ -32,7 +34,7 @@ export const Slider = ({ games }) => {
         })}
       </div>
       <div className='navigate'>
-        {games.map(({ id, image }, index) => (
+        {filterGames.map(({ id, image, title }, index) => (
           <div
             className='navigate__navblock'
             key={id}
@@ -46,6 +48,7 @@ export const Slider = ({ games }) => {
               }
             >
               <img src={image} alt='img' />
+              <span>{title}</span>
             </div>
           </div>
         ))}

@@ -1,0 +1,39 @@
+$footer-bg: #202020;
+.footer-wrapper {
+  display: flex;
+  flex: 0 0 auto;
+  position: absolute;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  margin-top: 125px;
+  background: $footer-bg;
+}
+.footer {
+  display: flex;
+  padding: 20px 0 0 60px;
+
+  span {
+    display: flex;
+    font-size: 12px;
+    margin-left: 50px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+}
+.footer__links {
+  display: flex;
+  width: 65px;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  a {
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0.7;
+  }
+  a:hover {
+    opacity: 1;
+  }
+}

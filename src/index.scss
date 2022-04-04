@@ -5,7 +5,14 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
 }
+html,
 body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   background-color: var(--color-bg);
 }
@@ -15,7 +22,11 @@ a {
 }
 
 .App {
+  display: flex;
+  position: relative;
+  flex-direction: column;
   max-width: 1100px;
+  min-height: 100%;
   margin: 0 auto;
   padding: 0 40px;
   color: white;

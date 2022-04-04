@@ -1,0 +1,15 @@
+.gamecover {
+  display: flex;
+  flex-direction: row;
+  background: no-repeat;
+  background-size: contain;
+  border-radius: 10px;
+  width: 200px;
+  height: 115px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}

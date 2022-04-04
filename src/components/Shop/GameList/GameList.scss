@@ -1,0 +1,24 @@
+.gamelist-wrapper {
+  display: block;
+  margin-top: 30px;
+}
+
+.gamelist-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gamelist-arrow-nav {
+  display: flex;
+  button {
+    display: flex;
+    margin-left: 5px;
+  }
+}
+
+.gamelist {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
