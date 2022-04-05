@@ -1,0 +1,37 @@
+$background-btn: rgb(0, 116, 228);
+$background-disable: #343434;
+.btn {
+  background: $background-btn;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  width: 80px;
+  height: 20px;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.1s ease-in-out;
+}
+
+.btn-primary {
+  background-color: $background-disable;
+  &:hover {
+    background: lighten($background-disable, 10%);
+  }
+}
+.btn-secondary {
+  background-color: $background-btn;
+  &:hover {
+    background: darken($background-btn, 10%);
+  }
+}
+
+.btn-order {
+  font-size: 14px;
+  width: 140px;
+  height: 30px;
+  border-radius: 16px;
+}
+.btn-medium {
+  font-size: 12px;
+}

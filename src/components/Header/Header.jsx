@@ -1,9 +1,8 @@
-import React from 'react';
 import { BiSearch } from 'react-icons/bi';
-import { FiShoppingCart } from 'react-icons/fi';
 import { NavLink } from 'react-router-dom';
 
 import styles from './Header.module.scss';
+import { Cart } from './Cart/Cart';
 
 export const Header = () => {
   return (
@@ -23,14 +22,7 @@ export const Header = () => {
           <NavLink to='/news'>Новости</NavLink>
         </ul>
       </div>
-      <div className={styles.cart}>
-        <div className={styles.cartIcon}>
-          <FiShoppingCart />
-        </div>
-        <div className={styles.totalPrice}>
-          <span>В корзине ничего нет</span>
-        </div>
-      </div>
+      <Cart />
     </div>
   );
 };

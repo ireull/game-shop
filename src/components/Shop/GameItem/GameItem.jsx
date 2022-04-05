@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { GameBuy } from '../GameBuy/GameBuy';
 import { GameCover } from '../GameCover/GameCover';
 

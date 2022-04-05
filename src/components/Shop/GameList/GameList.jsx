@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { GameItem } from '../GameItem/GameItem';
 
 import './GameList.scss';

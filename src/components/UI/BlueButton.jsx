@@ -1,10 +1,19 @@
+import classNames from 'classnames';
 import React from 'react';
 
-import styles from './BlueButton.module.scss';
-export const BlueButton = ({ title, onClick }) => {
+import './BlueButton.scss';
+
+export const BlueButton = ({ children, onClick, type, size = 's' }) => {
+  const btnClass = classNames({
+    btn: true,
+    'btn-secondary': type === 'secondary',
+    'btn-primary': type === 'primary',
+    'btn-order': size === 'order',
+    'btn-medium': size === 'm',
+  });
   return (
-    <button className={styles.btn} onClick={onClick}>
-      {title}
+    <button className={btnClass} onClick={onClick}>
+      {children}
     </button>
   );
 };
