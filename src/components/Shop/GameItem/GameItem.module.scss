@@ -2,5 +2,13 @@
   text-align: start;
   padding: 5px 0 5px 0;
   font-size: 12px;
+}
 
+.gameBuy {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.gamePrice {
+  font-size: 14px;
 }

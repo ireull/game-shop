@@ -8,7 +8,7 @@ import { BlueButton } from '../../UI/BlueButton';
 
 import styles from './GameBuy.module.scss';
 
-export const GameBuy = ({ game }) => {
+export const GameBuy = ({ game, size }) => {
   const dispatch = useDispatch();
   const items = useSelector((state) => state.cart.cartItems);
   const isItemInCart = items.some((item) => item.id === game.id);
@@ -25,16 +25,22 @@ export const GameBuy = ({ game }) => {
   return (
     <div className={styles.gamebuy}>
       {!isItemInCart ? (
-        <BlueButton type='secondary' size='m' onClick={handleClick}>
+        <BlueButton
+          type='secondary'
+          size={size ? 'order' : 'l'}
+          onClick={handleClick}
+        >
           В корзину
         </BlueButton>
       ) : (
-        <BlueButton type='primary' size='m' onClick={handleClick}>
+        <BlueButton
+          type='primary'
+          size={size ? 'order' : 'l'}
+          onClick={handleClick}
+        >
           Добавлен
         </BlueButton>
       )}
-
-      <span className={styles.price}>{game.price} руб.</span>
     </div>
   );
 };

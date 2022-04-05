@@ -1,40 +1,42 @@
-// import React from 'react';
-// import { useSelector } from 'react-redux';
-// import { GameBuy } from '../../components/Shop/GameBuy/GameBuy';
-// import { GameCover } from '../../components/Shop/GameCover/GameCover';
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { GameBuy } from '../../components/Shop/GameBuy/GameBuy';
+import { GameGenre } from '../../components/Shop/GameGenre/GameGenre';
+import { GameImg } from '../../components/Shop/GameImg/GameImg';
 
-// import './GamePage.scss';
+import styles from './GamePage.module.scss';
 
-// export const GamePage = () => {
-//   const game = useSelector((state) => state.games.currentGame);
+export const GamePage = () => {
+  const game = useSelector((state) => state.games.currentGame);
 
-//   if (!game) return null;
+  if (!game) return null;
 
-//   return (
-//     <div className='game-page'>
-//       <h1 className='game-page__title'>{game.title}</h1>
-//       <div className='game-page__content'>
-//         <div className='game-page__left'>
-//           <iframe
-//             width='90%'
-//             height='400px'
-//             src={game.video}
-//             title='Youtube video player'
-//             frameBorder='none'
-//           ></iframe>
-//         </div>
-//         <div className='game-page__right'>
-//           <GameCover image={game.image} />
-//           <p>{game.description}</p>
-//           <p className='secondary-text'>Популярные метки этого продукта:</p>
-//           {game.genres.map((genre) => (
-//             <GameGenre genre={genre} key={genre} />
-//           ))}
-//           <div className='game-page__buy-game'>
-//             <GameBuy game={game} />
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
+  return (
+    <div>
+      <h1>{game.title}</h1>
+      <div className={styles.content}>
+        <div className={styles.left}>
+          <iframe
+            width='90%'
+            height='400px'
+            src={game.video}
+            title='Youtube video player'
+            frameBorder='none'
+          ></iframe>
+        </div>
+        <div className={styles.right}>
+          <GameImg game={game} />
+          <p>{game.description}</p>
+          <p>Популярные метки этой игры:</p>
+          {game.genres.map((genre) => (
+            <GameGenre genre={genre} key={genre} />
+          ))}
+          <div className={styles.gameBuy}>
+            <GameBuy game={game} size='l' />
+            <span className={styles.gamePrice}>{game.price} руб.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};

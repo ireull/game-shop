@@ -9,13 +9,14 @@ export const GameItem = ({ gamesFilter }) => {
   return (
     <>
       {gamesFilter.map((game) => (
-        <div className={styles.gameitem} key={game.id}>
+        <div className={styles.gameItem} key={game.id}>
           <GameCover game={game} />
           <div className={styles.details}>
             <span>{game.title}</span>
           </div>
-          <div className={styles.gamebuy}>
+          <div className={styles.gameBuy}>
             <GameBuy game={game} />
+            <span className={styles.gamePrice}>{game.price} руб.</span>
           </div>
         </div>
       ))}
