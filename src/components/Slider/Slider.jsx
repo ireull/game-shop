@@ -8,9 +8,10 @@ import './Slider.scss';
 export const Slider = ({ games }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   const filterGames = games.filter((game) => game.preview !== false);
+
+  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   const changeActiveSlide = (index) => {
     setActiveSlideIndex(index);
@@ -34,8 +35,8 @@ export const Slider = ({ games }) => {
               key={id}
               className={
                 activeSlideIndex === index + 1
-                  ? 'slider__slide slide-active '
-                  : 'slider__slide '
+                  ? 'slider__slide slide__active '
+                  : 'slider__slide  '
               }
               onClick={() => currentGameNavigate(game)}
             >

@@ -1,0 +1,45 @@
+.wrapper {
+  display: flex;
+}
+.allGames {
+  display: flex;
+  flex-direction: column;
+}
+.gamesList {
+  display: flex;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+.gamesitem {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 250px;
+  flex: 1 0 21%;
+  margin-top: 10px;
+  &:last-child {
+    flex: 21;
+  }
+}
+.image {
+  cursor: pointer;
+  img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 250px;
+    height: 150px;
+    transform: translateY(0px);
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  div {
+    margin-top: 10px;
+  }
+}
