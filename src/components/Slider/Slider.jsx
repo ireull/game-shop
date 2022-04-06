@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { setCurrentGame } from '../../store/reducers/gamesReducer';
 
 import './Slider.scss';
 
 export const Slider = ({ games }) => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   const filterGames = games.filter((game) => game.preview !== false);
@@ -15,10 +20,15 @@ export const Slider = ({ games }) => {
     setActiveSlideIndex(1);
   }, []);
 
+  const currentGameNavigate = (game) => {
+    dispatch(setCurrentGame(game[activeSlideIndex - 1]));
+    navigate(`/game/${game[activeSlideIndex - 1].title}`);
+  };
+
   return (
     <div className='slider-wrapper'>
       <div className='slider'>
-        {filterGames.map(({ id, image }, index) => {
+        {filterGames.map(({ id, image }, index, game) => {
           return (
             <div
               key={id}
@@ -27,6 +37,7 @@ export const Slider = ({ games }) => {
                   ? 'slider__slide slide-active '
                   : 'slider__slide '
               }
+              onClick={() => currentGameNavigate(game)}
             >
               <img src={image} alt='img' className='slider__active-image' />
             </div>
