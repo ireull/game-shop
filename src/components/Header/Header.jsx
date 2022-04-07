@@ -1,20 +1,14 @@
-import { BiSearch } from 'react-icons/bi';
 import { NavLink } from 'react-router-dom';
 
-import styles from './Header.module.scss';
 import { Cart } from './Cart/Cart';
+import { SearchMenu } from './Search/SearchMenu/SearchMenu';
+
+import styles from './Header.module.scss';
 
 export const Header = () => {
   return (
     <div className={styles.header}>
-      <div className={styles.searchQuery}>
-        <div className={styles.searchIcon}>
-          <BiSearch />
-        </div>
-        <div>
-          <input placeholder='Поиск' />
-        </div>
-      </div>
+      <SearchMenu />
       <div>
         <ul className={styles.navigate}>
           <NavLink to='/'>Главное</NavLink>

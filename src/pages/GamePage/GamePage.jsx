@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { GameBuy } from '../../components/Shop/GameBuy/GameBuy';
 import { GameGenre } from '../../components/Shop/GameGenre/GameGenre';
 import { GameImg } from '../../components/Shop/GameImg/GameImg';
+import { GenreList } from '../../components/Shop/GenreList/GenreList';
 
 import styles from './GamePage.module.scss';
 
@@ -28,9 +29,7 @@ export const GamePage = () => {
           <GameImg game={game} />
           <p>{game.description}</p>
           <p>Популярные метки этой игры:</p>
-          {game.genres.map((genre) => (
-            <GameGenre genre={genre} key={genre} />
-          ))}
+          <GenreList genres={game.genres} />
           <div className={styles.gameBuy}>
             <GameBuy game={game} size='l' />
             <span className={styles.gamePrice}>{game.price} руб.</span>

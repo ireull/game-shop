@@ -1,0 +1,12 @@
+$modalWindow: rgb(36, 37, 41);
+.gameItem {
+  cursor: pointer;
+  padding: 10px 8px 8px 10px;
+  width: 160px;
+  border-radius: 10px;
+  transition: background 0.3s ease-in-out;
+
+  &:hover {
+    background: lighten($modalWindow, 10%);
+  }
+}

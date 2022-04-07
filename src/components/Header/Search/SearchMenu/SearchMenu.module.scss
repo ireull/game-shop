@@ -1,0 +1,42 @@
+$backgroundSearch: #2a2a2a;
+$textSearch: #9a9a9a;
+$colorMain: #121212;
+$modalWindow: rgb(36, 37, 41);
+
+.searchQuery {
+  position: relative;
+  display: flex;
+  background: $backgroundSearch;
+  height: 35px;
+  width: 160px;
+  align-items: center;
+  border: 1px solid $backgroundSearch;
+  border-radius: 20px;
+  .searchIcon {
+    display: flex;
+    justify-content: end;
+    margin-left: 16px;
+    color: $textSearch;
+  }
+  input {
+    margin-left: 8px;
+    outline: none;
+    width: 110px;
+    background: none;
+    border: none;
+    color: white;
+  }
+  input::placeholder {
+    color: $textSearch;
+  }
+}
+
+.searchWindow {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  left: 0;
+  z-index: 2;
+  background: $modalWindow;
+}

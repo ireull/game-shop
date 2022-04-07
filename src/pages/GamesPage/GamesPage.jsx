@@ -1,9 +1,10 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+
 import { GameBuy } from '../../components/Shop/GameBuy/GameBuy';
-import { BlueButton } from '../../components/UI/BlueButton';
 import { setCurrentGame } from '../../store/reducers/gamesReducer';
+
 import styles from './GamesPage.module.scss';
 
 export const GamesPage = () => {
