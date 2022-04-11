@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { setCurrentGame } from '../../store/reducers/gamesReducer';
+import { setCurrentGame } from '../../redux/reducers/gamesReducer';
 
 import './Slider.scss';
 

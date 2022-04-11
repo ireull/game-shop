@@ -3,7 +3,7 @@ import { OrderCover } from '../OrderCover/OrderCover';
 import { MdDeleteOutline } from 'react-icons/md';
 import styles from './OrderItem.module.scss';
 import { useDispatch } from 'react-redux';
-import { deleteItemFromCart } from '../../../store/reducers/cartReducer';
+import { deleteItemFromCart } from '../../../redux/reducers/cartReducer';
 
 export const OrderItem = ({ game }) => {
   const dispatch = useDispatch();

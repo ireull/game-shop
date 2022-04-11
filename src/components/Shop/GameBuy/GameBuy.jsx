@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   deleteItemFromCart,
   setItemInCart,
-} from '../../../store/reducers/cartReducer';
+} from '../../../redux/reducers/cartReducer';
 import { BlueButton } from '../../UI/BlueButton';
 
 import styles from './GameBuy.module.scss';

@@ -6,10 +6,14 @@
 }
 .orderPage {
   display: flex;
+  height: 500px;
   justify-content: space-between;
   flex-direction: column;
 }
 .orderItem {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   width: 100%;
   height: 135px;
   flex-grow: 1;

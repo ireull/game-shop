@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 import { GameBuy } from '../../components/Shop/GameBuy/GameBuy';
-import { setCurrentGame } from '../../store/reducers/gamesReducer';
+import { setCurrentGame } from '../../redux/reducers/gamesReducer';
 
 import styles from './GamesPage.module.scss';
 

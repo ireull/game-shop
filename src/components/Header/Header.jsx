@@ -13,7 +13,6 @@ export const Header = () => {
         <ul className={styles.navigate}>
           <NavLink to='/'>Главное</NavLink>
           <NavLink to='/games'>Все игры</NavLink>
-          <NavLink to='/news'>Новости</NavLink>
         </ul>
       </div>
       <Cart />
