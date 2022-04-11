@@ -13,6 +13,7 @@ $colorMain: #121212;
 
 .navigate {
   display: flex;
+  width: 250px;
   list-style-type: none;
   cursor: pointer;
   ul {
@@ -26,4 +27,3 @@ $colorMain: #121212;
     transition: color 0.3s ease-in-out;
   }
 }
-
